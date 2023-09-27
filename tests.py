@@ -127,7 +127,7 @@ class TestBooksCollector:
 
         assert collector.get_books_with_specific_genre(genre) == []
 
-    def test_get_books_with_specific_genre_books_dont_exist_success(self):
+    def test_get_books_with_specific_genre_genre_dont_exist_success(self):
         collector = BooksCollector()
 
         genre = 'genry_dont_exist'
@@ -166,9 +166,9 @@ class TestBooksCollector:
                  ]
         genres = ['Фантастика', 'Ужасы', 'Детективы', 'Мультфильмы', 'Комедии']
         books_for_children = ['Гордость и предубеждение и зомби',
-                 'Как клонировать анус',
-                 'Мохнатка Бетти'
-                 ]
+                              'Как клонировать анус',
+                              'Мохнатка Бетти'
+                              ]
 
         for i in range(len(books)):
             collector.add_new_book(books[i])
@@ -239,7 +239,7 @@ class TestBooksCollector:
         assert collector.favorites == [book1]
 
 # -------------------------------------        get_list_of_favorites_books()       -------------------------------------
-    def test_get_list_of_favorites_books_books_exist_success(self):
+    def test_get_list_of_favorites_books_books_exist_in_favorites_success(self):
         collector = BooksCollector()
 
         book1 = 'Гордость и предубеждение и зомби'
@@ -252,7 +252,7 @@ class TestBooksCollector:
 
         assert collector.get_list_of_favorites_books() == [book1, book2]
 
-    def test_get_list_of_favorites_books_books_exist_success(self):
+    def test_get_list_of_favorites_books_books_doest_exist_in_favorites__success(self):
         collector = BooksCollector()
 
         assert collector.get_list_of_favorites_books() == []
