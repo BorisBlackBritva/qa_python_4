@@ -252,7 +252,7 @@ class TestBooksCollector:
 
         assert collector.get_list_of_favorites_books() == [book1, book2]
 
-    def test_get_list_of_favorites_books_books_doest_exist_in_favorites__success(self):
+    def test_get_list_of_favorites_books_books_doest_exist_in_favorites_success(self):
         collector = BooksCollector()
 
         assert collector.get_list_of_favorites_books() == []
